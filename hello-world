@@ -1,0 +1,9 @@
+from sklearn import tree
+# This decision tree will determine if it's a cat or dog
+# Features are weight in grams and if "craps in a box" Y = 1
+features = [[4, 1], [7,1], [5, 1], [22,0], [11,0], [13,0]]
+# Cat = 0, Dog = 1
+labels = [0, 0, 0, 1, 1, 1]
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(features, labels)
+print clf.predict([[12,0]])
